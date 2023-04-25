@@ -1,0 +1,32 @@
+.head-block{
+    background-color: rgb(155, 245, 132);
+    color: white;
+    border-radius: 10px;
+    
+}
+
+
+img{
+    height: 300px;
+    width:400px;
+    align-items: center;
+    
+}
+
+.list-product{
+	display: flex;
+	justify-content: center;
+	gap: 41px;
+
+
+}
+
+.product-card{
+    background-color: rgb(255, 174, 0);
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 50px;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+}

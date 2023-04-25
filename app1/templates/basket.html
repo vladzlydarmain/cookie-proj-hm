@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'stylee.css' %}">
+    <title>Кошик</title>
+</head>
+<body>
+    <a href="{% url 'home' %}"><button>Повернутись на головну</button></a>
+    <div class="list-product">
+        {% for product in product_list %}
+        <div class="product-card">
+            
+            <form action="" method='POST'>
+                {% csrf_token %}
+
+                <img src="{{ product.image.url }}" alt="Картинка" >
+                <p>{{ product.name }}</p>
+                <p>ціна - {{ product.cost }}</p>
+                <!-- <input type="button" value="{{product.pk}}" name="go_to_basket" title="Додати у кошик"> -->
+                <button value="{{product.pk}}" name="go_into_basket">Видалити з кошика</button>
+
+            </form>
+
+        </div>
+        {% endfor %}
+</body>
+</html>
